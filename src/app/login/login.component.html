@@ -1,14 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>login</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+<header class="header">
+   <section class="flex">
+      <h3 class="logo">Welcome Back!</h3>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+   </section>
+</header>   
+
+
+
 <section class="form-container">
-
-   <form action="" method="post" enctype="multipart/form-data"(submit)="onLogin()">
-
-      <input type="email" name="email" [(ngModel)]="email" placeholder="Email" class="box" required>
-      <input type="password" name="password" [(ngModel)]="password" placeholder="enter your password"  maxlength="20" class="box" required>
-      <button routerLink="/homepage" value="login" name="submit" class="btn" type="submit">Login</button>
-
+   <form action="" method="post" enctype="multipart/form-data">
+    <div id="loginlogo" class="login-logo">
+      <img id="logo image" src="https://elearning.cis.asu.edu.eg/undergraduate/pluginfile.php/1/theme_moove/logo/1696568682/SF.png" class="image-fluid">
+   </div>
+      <!-- <p>username <span>*</span></p> -->
+      <input type="email" name="email" placeholder="username"  maxlength="14" class="box">
+      <!-- <p>password <span>*</span></p> -->
+      <input type="password" name="pass" placeholder="enter your password"  maxlength="20" class="box">
+      <input type="submit" routerLink="/homepage" value="login" name="submit" class="btn">
       <a href="/lostpassword" class="title">Forgot your password?</a>
-      
+      <div class="register">Not a member? <a routerLink="/Register">Register</a></div>
    </form>
-
 </section>
 
+   
+</body>
+</html>

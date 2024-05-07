@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#0E46A3;
+   --main-color:hsl(217, 84%, 35%);
    --red:#e74c3c;
    --orange:#f39c12;
    --light-color:#888;
@@ -134,17 +134,14 @@ section{
 }
 
 .header{
-   width: 100%;
    position: sticky;
    top:0; left:0; right: 0;
    background-color: var(--white);
    z-index: 1000;
    border-bottom: var(--border);
-   overflow-x:hidden
 }
 
 .header .flex{
-   width: 100%;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -153,7 +150,6 @@ section{
 }
 
 .header .flex .logo{
-  
    font-size: 2.5rem;
    color: var(--black);
 }
@@ -1264,11 +1260,10 @@ section{
 }
 
 .form-container form{
-
    background-color: var(--white);
    border-radius: .5rem;
    padding: 2rem;
-   width: 70%;
+   width: 50rem;
 }
 
 .form-container form h3{
@@ -1278,12 +1273,6 @@ section{
    text-align: center;
 }
 
-.form-container form .register{
-   font-size: 2rem;
-   text-transform: capitalize;
-   color: var(--black);
-   text-align: center;
-}
 .form-container form p{
    font-size: 1.7rem;
    color: var(--light-color);
@@ -1304,11 +1293,26 @@ section{
    margin: 1rem 0;
 }
 
-.form-container .title{
-   font-size: 1.5rem;
-   text-transform: capitalize;
-   text-align: center;
+.form-container .box-container{
+   font-size: 1.8rem;
+   color: var(--black);
+   border-radius: .5rem;
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   width: 100%;
+   margin: 1rem 0;
 }
+.form-container .box-container .box{
+   font-size: 1.8rem;
+   color: var(--black);
+   border-radius: .5rem;
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   width: 100%;
+   margin: 1rem 0;
+}
+
+
 
 
 
@@ -1408,13 +1412,27 @@ section{
       height: 25rem;
    }
 
-}
-.form-container{
-   min-height: calc(100vh - 20rem);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.header .flex{
-   width: 100;
+   .form-container .box-container .box{
+      background-color: var(--white) !important;
+      border-radius: .5rem;
+      padding:2rem;
+      border: #000;
+   }
+
+   .form-container{
+      min-height: calc(100vh - 20rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   
+   .form-container .box-container{
+   
+      background-color: var(--white);
+      border-radius: .5rem;
+      padding: 2rem;
+      width: 70%;
+   }
+
+
 }

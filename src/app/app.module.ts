@@ -25,6 +25,9 @@ import { UiComponent } from './ui/ui.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminCourseManageComponent } from './admin-course-manage/admin-course-manage.component';
 import { StudentProgressComponent } from './student-progress/student-progress.component';
+import { RegisterComponent } from './register/register.component';
+import { IassignmentComponent } from './iassignment/iassignment.component';
+import { IhomepageComponent } from './ihomepage/ihomepage.component';
 
 
 
@@ -45,6 +48,9 @@ import { StudentProgressComponent } from './student-progress/student-progress.co
     AdminComponent,
     AdminCourseManageComponent,
     StudentProgressComponent,
+    RegisterComponent,
+    IassignmentComponent,
+    IhomepageComponent,
   ],
   imports: [
     BrowserModule,

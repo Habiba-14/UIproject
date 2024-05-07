@@ -134,26 +134,24 @@ section{
 }
 
 .header{
-   width: 100%;
-   position: sticky;
-   top:0; left:0; right: 0;
-   background-color: var(--white);
-   z-index: 1000;
-   border-bottom: var(--border);
-   overflow-x:hidden
+
+    position: sticky;
+    top:0; left:0; right: 0;
+    background-color: var(--white);
+    z-index: 1000;
+    border-bottom: var(--border);
+    overflow-x:hidden;
 }
 
-.header .flex{
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   position: relative;
-   padding: 1.5rem 2rem;
-}
+/* .header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem 2rem;
+} */
 
 .header .flex .logo{
-  
    font-size: 2.5rem;
    color: var(--black);
 }
@@ -1263,12 +1261,13 @@ section{
    justify-content: center;
 }
 
-.form-container form{
 
+.form-container form{
    background-color: var(--white);
    border-radius: .5rem;
    padding: 2rem;
-   width: 70%;
+   width: 100rem;
+   margin: center;
 }
 
 .form-container form h3{
@@ -1278,17 +1277,29 @@ section{
    text-align: center;
 }
 
-.form-container form .register{
-   font-size: 2rem;
-   text-transform: capitalize;
-   color: var(--black);
-   text-align: center;
-}
 .form-container form p{
    font-size: 1.7rem;
    color: var(--light-color);
    padding-top: 1rem;
 }
+.form-container form .register{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding-top: 1rem;
+ }
+ .form-container input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  
+  .form-container form label {
+    font-size: 1.7rem;
+   color: black;
+   padding-top: 1rem;
+    display: inline-block; /* Make labels inline */
+    margin-bottom: 5px; /* Add spacing between labels */
+    /* Add more styling as needed */
+  }
 
 .form-container form p span{
    color: var(--red);
@@ -1304,11 +1315,7 @@ section{
    margin: 1rem 0;
 }
 
-.form-container .title{
-   font-size: 1.5rem;
-   text-transform: capitalize;
-   text-align: center;
-}
+
 
 
 
@@ -1408,13 +1415,4 @@ section{
       height: 25rem;
    }
 
-}
-.form-container{
-   min-height: calc(100vh - 20rem);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.header .flex{
-   width: 100;
 }

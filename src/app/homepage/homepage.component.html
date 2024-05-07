@@ -16,9 +16,7 @@
 <body>
 
 <header class="header">
-   
    <section class="flex">
-
       <!-- <a href="home.html" class="logo">Educa.</a> -->
 
       <form action="search.html" method="post" class="search-form">
@@ -61,18 +59,14 @@
    </div>
 
    <nav class="navbar">
-      <a href="Homepage.component.html"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="Courses.component.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
-      <a href="Assignemnts.html"><i class="fas fa-graduation-cap"></i><span>Assignemnts</span></a>
-      <a href="Assignemnts.html"><i class="fas fa-graduation-cap"></i><span>Announcements</span></a>
-      <a href="Assignemnts.html"><i class="fas fa-graduation-cap"></i><span>Grades</span></a>
+      <a routerLink="/home"><i class="fas fa-home"></i><span>Home</span></a>
+      <a routerLink="/courses"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a routerLink="/assignment"><i class="fa-solid fa-marker"></i><span>Assignemnts</span></a>
+      <a routerLink="/studentgrades"><i class="fa-solid fa-award"></i><span>Grades</span></a>
+      <a routerLink="/studentsprogress"><i class="fa-solid fa-bars-progress"></i><span>Progress</span></a>
    </nav>
-
 </div>
 
-
-
-=
 
 <section class="home-grid">
 
@@ -219,47 +213,20 @@
          <a href="playlist.html" class="inline-btn">course details</a>
       </div>
 
-      <div class="box">
-         <div class="tutor">
-            <!-- <img src="images/pic-5.jpg" alt=""> -->
-            <div class="info">
-               <h3>Reusable SW architecture</h3>
-               <span>Dr. Marwa Mostafa</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-4.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <!-- <h3 class="title">complete Boostrap tutorial</h3> -->
-         <a href="playlist.html" class="inline-btn">course details</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <!-- <img src="images/pic-6.jpg" alt=""> -->
-            <div class="info">
-               <h3>Cloud Computing</h3>
-               <span>Dr Emain Amin</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-5.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <!-- <h3 class="title">complete JQuery tutorial</h3> -->
-         <a href="playlist.html" class="inline-btn">course Details</a>
-      </div>
-
     
 
    </div>
 
    <div class="more-btn">
-      <a href="courses.html" class="inline-option-btn">view all courses</a>
+      <a routerLink="/courses" class="inline-option-btn">view all courses</a>
+
+      <!-- <a href="CoursesComponent" class="inline-option-btn">view all courses</a> -->
    </div>
 
 </section>
    
 </body>
 </html>
+
+
+
