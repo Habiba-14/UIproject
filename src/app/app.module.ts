@@ -24,6 +24,7 @@ import { StudentGradesComponent } from './student-grades/student-grades.componen
 import { UiComponent } from './ui/ui.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminCourseManageComponent } from './admin-course-manage/admin-course-manage.component';
+import { StudentProgressComponent } from './student-progress/student-progress.component';
 
 
 
@@ -43,6 +44,7 @@ import { AdminCourseManageComponent } from './admin-course-manage/admin-course-m
     UiComponent,
     AdminComponent,
     AdminCourseManageComponent,
+    StudentProgressComponent,
   ],
   imports: [
     BrowserModule,
