@@ -1,8 +1,6 @@
 import { Component, ViewChild, inject } from '@angular/core';
-import { Firestore, doc, updateDoc, arrayUnion, addDoc } from '@angular/fire/firestore';
+import { Firestore, arrayUnion, doc, updateDoc } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
-import { IassignmentdbService } from '../iassignmentdb.service';
-import { collection } from 'firebase/firestore';
 
 @Component({
   selector: 'app-add-new-assignment',
@@ -11,36 +9,29 @@ import { collection } from 'firebase/firestore';
 })
 export class AddNewAssignmentComponent {
 
-  @ViewChild ("createAssignment") assignmentForm : any;
-  firestore:Firestore = inject(Firestore);
-
-  savaData():void{
-
-    const acollection = collection(this.firestore,'Courses');
-    addDoc(acollection,
-      {assignment_title : this.assignmentForm.value.assignment_title,
-       description : this.assignmentForm.value.description,
-       due_date : this.assignmentForm.value.due_date,
+  @ViewChild('createAssignment') assignmentForm!: NgForm;
+  firestore: Firestore = inject(Firestore);
+  saveData(): void {
+    const courseDocRef = doc(this.firestore, 'Courses', 'OOP');
+    updateDoc(courseDocRef, {
+      assessments: arrayUnion({
+        title: this.assignmentForm.value.assignmentTitle,
+        description: this.assignmentForm.value.assignmentDescription,
+        dueDate: this.assignmentForm.value.dueDate
       })
-
+    });
   }
 
-
-  resetForm():void{
-
-    this.assignmentForm.reset({
-      'assignment_title' : '',
-      'description' :'',
-      'due_date':''
-    })
+  resetForm(): void {
+    this.assignmentForm.reset();
   }
 
-  submitForm():void{
-
-    this.savaData();
-    this.resetForm();
-   
-  }
+  submitForm(): void {
+    if (this.assignmentForm.valid) {
+      this.saveData();
+      this.resetForm();
+    }
+  }
 
 //   const assignmentId = 'some-unique-id';
 //   const updatedData = {
