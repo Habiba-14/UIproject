@@ -1,22 +1,19 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder,Validators } from '@angular/forms';
-
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-assignment',
   templateUrl: './assignment.component.html',
-  styleUrl: './assignment.component.css'
+  styleUrls: ['./assignment.component.css']
 })
 export class AssignmentComponent {
-
   assignmentForm: FormGroup;
-  options = [
-    { value: 'option1', viewValue: 'Option 1' },
-    { value: 'option2', viewValue: 'Option 2' },
-    { value: 'option3', viewValue: 'Option 3' }
-  ];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private firestore: AngularFirestore // Inject Firestore service
+  ) {
     this.assignmentForm = this.formBuilder.group({
       title: ['', Validators.required],
       file: ['', Validators.required],
@@ -25,7 +22,21 @@ export class AssignmentComponent {
   }
 
   onSubmit() {
-   
-  }
+    // Get form values
+    const assignmentTitle = this.assignmentForm.get('title')!.value;
+    const assignmentFile = this.assignmentForm.get('file')!.value;
 
+    // Save data to Firestore (replace 'assignments' with your collection name)
+    this.firestore.collection('assignments').add({
+      title: assignmentTitle,
+      file: assignmentFile,
+    })
+    .then(() => {
+      console.log('Assignment submitted successfully!');
+      // You can perform additional actions (e.g., show success message)
+    })
+    .catch(error => {
+      console.error('Error submitting assignment:', error);
+    });
+  }
 }
