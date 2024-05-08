@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "ui-project",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "europe-west1"
+      }
+    }
+  ]
+}

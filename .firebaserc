@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "uiproject-955ff": {
+      "hosting": {
+        "ui-project": [
+          "uiproject-955ff"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "uiproject-955ff"
+  }
+}

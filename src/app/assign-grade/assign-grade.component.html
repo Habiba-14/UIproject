@@ -1,0 +1,38 @@
+<section>
+    <div>
+      <head>
+        <title>AddStudentGrades</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add Student Grades</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <select id="studentName" name="studentName" required>
+                      <option value="" disabled selected class="hint">Select student name</option>
+                      <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Topic:</label>
+                    <select id="topic" name="topic" required>
+                      <option value="" disabled selected class="hint">Select a topic</option>
+                      <option value="Topic 1">Topic 1</option>
+                        <option value="Topic 2">Topic 2</option>
+                        <option value="Topic 3">Topic 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade:</label>
+                    <input class="grade-input" type="number" id="grade" name="grade" min="0" max="100" required>
+                </div>
+                <button type="submit">Add Grade</button>
+            </form>
+        </div>
+    </body>
+    </div>
+  </section>

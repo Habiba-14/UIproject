@@ -1,0 +1,30 @@
+
+<section>
+    <div>
+    <head>
+        <title>Add Assignments</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add Assignments</h1>
+            <form #createAssignment="ngForm">
+                <div class="form-group">
+                    <label for="assignmentTitle">Assignment Title:</label>
+                    <input type="text" name="assignment_title" ngModel/>
+                </div>
+                <div class="form-group">
+                    <label for="assignmentDescription">Description:</label>
+                    <textarea id="assignmentDescription" name="description" rows="4" ngModel required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" name="due_date" ngModel required>
+                </div>
+                <div>
+                <button (click)="submitForm()" type="submit">Add Assignment</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    </div>
+</section>
