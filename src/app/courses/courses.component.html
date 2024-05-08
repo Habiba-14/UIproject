@@ -73,6 +73,15 @@
    <h1 class="heading">Your Courses</h1>
 
    <div class="box-container">
+      <div class="box" *ngFor="let course of courses$ | async">
+         <div class="tutor">
+            <div class="info">
+               <h3>{{ course.code }}</h3>
+               <span>{{ course.instructors }}</span>
+            </div>
+         </div>
+        
+      </div>
 
       <div class="box">
          <div class="tutor">

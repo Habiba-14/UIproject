@@ -4,7 +4,11 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
+
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -21,7 +25,7 @@ import { GradesComponent } from './grades/grades.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { StudentGradesComponent } from './student-grades/student-grades.component';
-import { UiComponent } from './ui/ui.component';
+
 import { AdminComponent } from './admin/admin.component';
 import { AdminCourseManageComponent } from './admin-course-manage/admin-course-manage.component';
 import { StudentProgressComponent } from './student-progress/student-progress.component';
@@ -62,13 +66,13 @@ const firebase = {
     StudentGradesComponent,
     AddNewAssignmentComponent,
     AssignGradeComponent,
-    UiComponent,
     AdminComponent,
     AdminCourseManageComponent,
     StudentProgressComponent,
     RegisterComponent,
     IassignmentComponent,
     IhomepageComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -7,18 +7,18 @@
    <title>Admin</title>
 
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"> -->
 
    <!-- custom css file link  -->
    <!-- <link rel="stylesheet" href="app.component.css"> -->
 
-</head>
+<!-- </head>
 <body>
 
 <header class="header">
    <section class="flex">
       <!-- <a href="home.html" class="logo">Educa.</a> -->
-
+<!-- 
       <form action="search.html" method="post" class="search-form">
          <input type="text" name="search_box" required placeholder="search..." maxlength="100">
          <button type="submit" class="fas fa-search"></button>
@@ -107,6 +107,175 @@
          </tbody>
          </div>
       </table>
+
+</body>
+</html> --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Admin</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <!-- <link rel="stylesheet" href="app.component.css"> -->
+
+</head>
+<body>
+   
+
+<header class="header">
+   <section class="flex">
+      <!-- <a href="home.html" class="logo">Educa.</a> -->
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Habiba</h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <h3 class="name">Name name</h3>
+      <p class="role">Admin</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a routerLink="/Admin"><i class="fa-solid fa-user"></i><span>User Management</span></a>
+      <a routerLink="/AdminCourse"><i class="fa-solid fa-chalkboard-user"></i><span>Course Management</span></a>
+      <a><i class="fa-solid fa-book-open-reader"></i><span>Assign Students</span></a>
+   </nav>
+
+</div>
+
+<div class="h1">
+    <h1>User Accounts</h1>
+</div>
+
+
+
+<hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Account</th>
+            <th scope="col">Approve</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Deactivate</th>
+          </tr>
+        </thead>
+       
+        <div>
+        <tbody>
+            <tr>
+                <td>1</td> 
+                <td>
+                    <input type="text" class="form-control" value="John Doe">
+                    <input type="text" class="form-control" value="Lorem ipsum dolor sit amet">
+                    <input type="date" class="form-control" value="2024-05-20">
+                </td>
+                <td><button id="Save" class="btn btn-warning btn-sm">Approve</button></td>
+                <td><button id="Delete" class="btn btn-danger btn-sm">Delete</button></td>
+                <td><button id="Edit" class="btn btn-info btn-sm">Deactivate</button></td>
+            </tr>
+            <tr>
+                <td>2</td> 
+                <td>
+                    <input type="text" class="form-control" value="Alice Smith">
+                    <input type="text" class="form-control" value="Lorem ipsum dolor sit amet">
+                    <input type="date" class="form-control" value="2024-05-20">
+                </td>
+                <td><button id="Save" class="btn btn-warning btn-sm">Approve</button></td>
+                <td><button id="Delete" class="btn btn-danger btn-sm">Delete</button></td>
+                <td><button id="Edit" class="btn btn-info btn-sm">Deactivate</button></td>
+            </tr>
+            <tr>
+                <td>3</td> 
+                <td>
+                    <input type="text" class="form-control" value="Emily Brown">
+                    <input type="text" class="form-control" value="Lorem ipsum dolor sit amet">
+                    <input type="date" class="form-control" value="2024-05-20">
+                </td>
+                <td><button id="Save" class="btn btn-warning btn-sm">Approve</button></td>
+                <td><button id="Delete" class="btn btn-danger btn-sm">Delete</button></td>
+                <td><button id="Edit" class="btn btn-info btn-sm">Deactivate</button></td>
+            </tr>
+            <tr>
+                <td>4</td> 
+                <td>
+                    <input type="text" class="form-control" value="Michael Johnson">
+                    <input type="text" class="form-control" value="Lorem ipsum dolor sit amet">
+                    <input type="date" class="form-control" value="2024-05-20">
+                </td>
+                <td><button id="Save" class="btn btn-warning btn-sm">Approve</button></td>
+                <td><button id="Delete" class="btn btn-danger btn-sm">Delete</button></td>
+                <td><button id="Edit" class="btn btn-info btn-sm">Deactivate</button></td>
+            </tr>
+         </tbody>
+         </div>
+      </table>
+
+      <!-- <table class="table">
+         <thead>
+           <tr>
+             <th scope="col">#</th>
+             <th scope="col">First Name</th>
+             <th scope="col">Last Name</th>
+             <th scope="col">Mobile Number</th>
+             <th scope="col">Civil ID Number</th>
+             <th scope="col">Email</th>
+             <th scope="col">Role</th>
+             <th scope="col">Actions</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let user of users; let i = index">
+             <td>{{ i + 1 }}</td>
+             <td>{{ user.firstName }}</td>
+             <td>{{ user.lastName }}</td>
+             <td>{{ user.mobileNumber }}</td>
+             <td>{{ user.civilIdNumber }}</td>
+             <td>{{ user.email }}</td>
+             <td>{{ user.role }}</td>
+             <td>
+               <button *ngIf="!user.approved" (click)="approveUser(user)">Approve</button>
+               <button (click)="deleteUser(user)" [disabled]="user.approved">Delete</button>
+               <button (click)="deactivateUser(user)" [disabled]="user.deactivated">Deactivate</button>
+             </td>
+           </tr>
+         </tbody>
+       </table> -->
+       
 
 </body>
 </html>

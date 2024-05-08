@@ -14,7 +14,7 @@ import { IassignmentComponent } from './iassignment/iassignment.component';
 import { IhomepageComponent } from './ihomepage/ihomepage.component';
 import { StudentGradesComponent } from './student-grades/student-grades.component';
 import { StudentProgressComponent } from './student-progress/student-progress.component';
-import { UiComponent } from './ui/ui.component';
+
 
 const routes: Routes = [
   {
@@ -73,10 +73,7 @@ const routes: Routes = [
     path:'studentsprogress',
     component: StudentProgressComponent
   },
-  {
-    path:'ui',
-    component: UiComponent
-  }
+
 
 ];
 

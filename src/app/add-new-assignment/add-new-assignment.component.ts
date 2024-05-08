@@ -11,6 +11,7 @@ import { collection } from 'firebase/firestore';
 })
 export class AddNewAssignmentComponent {
 
+
   @ViewChild ("createAssignment") assignmentForm : any;
   firestore:Firestore = inject(Firestore);
 
@@ -24,7 +25,6 @@ export class AddNewAssignmentComponent {
       })
 
   }
-
 
   resetForm():void{
 

@@ -56,7 +56,7 @@
 
    <nav class="navbar">
     <a routerLink="/Ihome"><i class="fas fa-graduation-cap"></i><span>Content</span></a>
-    <a routerLink="/Iassignment"><i class="fa-solid fa-marker"></i><span>Assignemnts</span></a>
+    <a routerLink="/Iassignment"><i class="fa-solid fa-marker"></i><span>Assessments</span></a>
     <a routerLink="/AddStudentGrades"><i class="fa-solid fa-chalkboard-user"></i><span>Progress</span></a>
    </nav>
 </div>
@@ -64,6 +64,25 @@
 <section class="form-container" >
 <div class="box-container">   
   <div class="box">
+    <!-- Add this form to your HTML template -->
+<!-- <form (submit)="addContent(week.value, description.value, contentType.value)">
+    <label for="week">Week:</label>
+    <input type="text" name="week" #week required>
+  
+    <label for="description">Description:</label>
+    <textarea name="description" #description required></textarea>
+  
+    <label for="contentType">Content Type:</label>
+    <select name="contentType" #contentType required>
+      <option value="upload">Upload Files</option>
+      <option value="video_or_audio">Video or Audio</option>
+      <option value="create">Create a File</option>
+      <option value="link">Create a link</option>
+    </select>
+  
+    <button type="submit">Add Content</button>
+  </form>
+   -->
     <details>
         <summary>
          WEEK 1

@@ -1,3 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Register</title>
+   <!-- font awesome cdn link  -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <!-- custom css file link  -->
+   <!-- <link rel="stylesheet" href="C:\Users\h.p\UIproject\src\app\app.component.css">
+</head> --> -
+
+<!-- <body>
+   
+<header class="header">
+   <section class="flex">
+      <h3 class="logo">Welcome to E-learning website!</h3>
+      <img id="logo image" src="https://elearning.cis.asu.edu.eg/undergraduate/pluginfile.php/1/theme_moove/logo/1696568682/SF.png" class="image-fluid">
+   </section>
+</header> 
+
+
+<section class="form-container">
+   <form action="" method="post" enctype="multipart/form-data">
+      < <p>username <span>*</span></p> -->
+      <!-- <input type="text" name="fname" placeholder="First Name"  maxlength="25" class="box">
+      <input type="text" name="lname" placeholder="Last Name"  maxlength="25" class="box">
+      <p>password <span>*</span></p> 
+     <input type="number" name="id" placeholder="National ID"  maxlength="14" class="box">
+     <input type="number" name="number" placeholder="Mobile Number"  maxlength="11" class="box">
+     <input type="text" name="email" placeholder="E-mail"  maxlength="25" class="box">
+     <input type="radio" id="student" name="fav_language" value="Student">
+      <label for="student">Student</label><br>
+      <input type="radio" id="Instructor" name="fav_language" value="Instructor">
+      <label for="Instructor">Instructor</label><br>
+     <input type="password" name="pass" placeholder="Password" class="box">
+     <input type="password" name="pass" placeholder="Re-Enter Password" class="box">
+      <input type="submit" routerLink="/login" value="Register" name="submit" class="btn">
+      <div class="register">Already have an account? <a routerLink="/login">Login</a></div> -->
+   <!-- </form>
+
+</section> 
+
+  
+</body>
+</html> --> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,36 +59,29 @@
 </head>
 
 <body>
-   
 <header class="header">
    <section class="flex">
       <h3 class="logo">Welcome to E-learning website!</h3>
       <img id="logo image" src="https://elearning.cis.asu.edu.eg/undergraduate/pluginfile.php/1/theme_moove/logo/1696568682/SF.png" class="image-fluid">
    </section>
-</header>  
+</header> 
 
 
 <section class="form-container">
-   <form action="" method="post" enctype="multipart/form-data">
-      <!-- <p>username <span>*</span></p> -->
-      <input type="text" name="fname" placeholder="First Name"  maxlength="25" class="box">
-      <input type="text" name="lname" placeholder="Last Name"  maxlength="25" class="box">
-      <!-- <p>password <span>*</span></p> --> 
-     <input type="number" name="id" placeholder="National ID"  maxlength="14" class="box">
-     <input type="number" name="number" placeholder="Mobile Number"  maxlength="11" class="box">
-     
-     <input type="radio" id="student" name="fav_language" value="Student">
-      <label for="student">Student</label><br>
-      <input type="radio" id="Instructor" name="fav_language" value="Instructor">
-      <label for="Instructor">Instructor</label><br>
-     <input type="password" name="pass" placeholder="Password" class="box">
-     <input type="password" name="pass" placeholder="Re-Enter Password" class="box">
-      <input type="submit" routerLink="/login" value="Register" name="submit" class="btn">
+   <form (submit)="register()" enctype="multipart/form-data">
+      <input type="text" name="fname" placeholder="First Name" [(ngModel)]="firstName" maxlength="25" class="box">
+      <input type="text" name="lname" placeholder="Last Name" [(ngModel)]="lastName" maxlength="25" class="box">
+      <input type="number" name="id" placeholder="National ID" [(ngModel)]="nationalID" maxlength="14" class="box">
+      <input type="number" name="number" placeholder="Mobile Number" [(ngModel)]="mobileNumber" maxlength="11" class="box">
+      <input type="email" name="email" placeholder="E-mail" [(ngModel)]="email" maxlength="25" class="box">
+      <label><input type="radio" name="role" value="student" [(ngModel)]="role"> Student</label>
+      <label><input type="radio" name="role" value="instructor" [(ngModel)]="role"> Instructor</label>
+      <input type="password" name="password" placeholder="Password" [(ngModel)]="password" class="box">
+      <input type="password" name="confirmPassword" placeholder="Re-Enter Password" [(ngModel)]="confirmPassword" class="box">
+      <input type="submit" value="Register" name="submit" class="btn">
       <div class="register">Already have an account? <a routerLink="/login">Login</a></div>
    </form>
+</section>
 
-</section> 
-
-  
 </body>
 </html>
